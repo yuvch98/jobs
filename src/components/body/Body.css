@@ -1,0 +1,15 @@
+.card{
+    width:18rem;
+}
+.card-body{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:end;
+}
+.pacman{
+    height:50vw;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+}
