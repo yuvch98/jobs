@@ -2,6 +2,10 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Job } from "../body/card";
 
+interface Jobs {
+  [company: string]: Job[];
+}
+
 const useJobs = (apiUrl: string) => {
   const [jobs, setJobs] = useState<Job[]>([]);
   const [loading, setLoading] = useState(true);
@@ -12,7 +16,7 @@ const useJobs = (apiUrl: string) => {
       try {
         setLoading(true);
         const response = await axios.get(apiUrl);
-        const jobs = JSON.parse(response.data.body);
+        const jobs: Jobs = JSON.parse(response.data.body);
         const flattenedJobs = Object.entries(jobs).flatMap(
           ([company, jobList]) => jobList.map((job) => ({ ...job, company }))
         );
