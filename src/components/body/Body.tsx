@@ -7,6 +7,7 @@ const Body = () => {
   const { jobs, loading, error } = useJobs(
     "https://htzg7vh5lh.execute-api.eu-central-1.amazonaws.com/prod"
   );
+  console.log(jobs);
   const [searchQuery, setSearchQuery] = useState("");
   // Filter jobs based on the search query
 
@@ -14,8 +15,7 @@ const Body = () => {
     (job) =>
       job["job_title"]?.toLowerCase().includes(searchQuery.toLowerCase()) ||
       job["location"]?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      job["company"]?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      job["active"]?.toLowerCase().includes(searchQuery.toLowerCase())
+      job["company"]?.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
