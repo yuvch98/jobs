@@ -37,10 +37,7 @@ const Body = () => {
   };
 
   // Handle page change
-  const handlePageChange = (
-    event: React.ChangeEvent<unknown>,
-    page: number
-  ) => {
+  const handlePageChange = (_: unknown, page: number) => {
     setCurrentPage(page);
   };
 
