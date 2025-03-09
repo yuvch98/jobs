@@ -1,7 +1,6 @@
 import { useState } from "react";
 import useJobs from "../hooks/fetchJobs";
 import JobCard from "./card";
-import { Job } from "../body/card";
 import ClipLoader from "react-spinners/PacmanLoader";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
