@@ -9,7 +9,6 @@ const Body = () => {
   const { jobs, loading, error } = useJobs(
     "https://htzg7vh5lh.execute-api.eu-central-1.amazonaws.com/prod"
   );
-  console.log(jobs);
 
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
@@ -68,7 +67,7 @@ const Body = () => {
       ) : (
         <div className="row">
           {paginatedJobs.map((job) => (
-            <div className="col-sm-6 col-md-4 col-lg-3 mb-4" key={job["id"]}>
+            <div className="col-sm-6 col-md-6 col-lg-3 mb-4" key={job["id"]}>
               <JobCard job={job} />
             </div>
           ))}

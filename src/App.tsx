@@ -1,8 +1,8 @@
-import Header from "./components/header/Header";
+import Header from "./components/index/header/Header";
 import "bootstrap/dist/css/bootstrap.css";
-import Body from "./components/body/Body";
-import "./components/body/Body.css";
-import Footer from "./components/footer/Footer";
+import Body from "./components/index/body/Body";
+import "./components/index/body/Body.css";
+import Footer from "./components/index/footer/Footer";
 function App() {
   return (
     <>

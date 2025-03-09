@@ -20,11 +20,11 @@ const JobCard = ({ job }: { job: Job }) => (
       <p className="card-text">
         <strong>Updated:</strong> {job.date}
       </p>
-      <div className="card-text">
+      <p className="card-text">
         <a href={job.url} className="btn btn-primary" target="_blank">
-          Apply
+          Apply job
         </a>
-      </div>
+      </p>
     </div>
   </div>
 );
