@@ -21,10 +21,10 @@ const useJobs = (apiUrl: string) => {
           ([company, jobList]) => jobList.map((job) => ({ ...job, company }))
         );
         setJobs(flattenedJobs);
+        console.log(jobs);
         setError(null);
       } catch (err) {
         setError("Failed to fetch jobs");
-        console.log(err);
       } finally {
         setLoading(false);
       }
