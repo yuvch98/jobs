@@ -7,9 +7,7 @@ import Stack from "@mui/material/Stack";
 import BasicSelect from "../Select";
 
 const Body = () => {
-  const { jobs, loading, error } = useJobs(
-    "https://htzg7vh5lh.execute-api.eu-central-1.amazonaws.com/prod"
-  );
+  const { jobs, loading, error } = useJobs(import.meta.env.VITE_API_URL);
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [sortBy, setSortBy] = useState<"Date" | "Company">("Date");
